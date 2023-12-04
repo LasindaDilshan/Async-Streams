@@ -13,7 +13,7 @@ They have introduced IAsyncEnumerble<T> , IAsyncEnumeratot<T> and IAsyncDisposab
 This feature allows you to handle data sequence where each element is generated asynchoronously.
 
 Example :-
-\`\`\`
+```
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,7 +39,7 @@ public class Program
         }
     }
 }
-\`\`\`
+```
 Use cases.
 
 Streaming data from web apis (Page Apis - https://www.youtube.com/watch?v=Ylcl8hKks_Y) 
