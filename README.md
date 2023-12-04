@@ -40,17 +40,17 @@ public class Program
     }
 }
 ```
-Use cases.
+# Use cases.
 
-Streaming data from web apis (Page Apis - https://www.youtube.com/watch?v=Ylcl8hKks_Y) 
+Streaming data from web apis (Page Apis - https://www.youtube.com/watch?v=Ylcl8hKks_Y) .
 Reading Large Files .
 
 
-Entity Framework Core
+# Entity Framework Core
 The most obvious library to benefit from async streams is Entity Framework Core. Records being read from a database are a great use case for a collection of items to access asynchronously.
 
 With the AsAsyncEnumerable() extension method, any instance of IQueryable<T> can be converted to IAsyncEnumerable<T> and then accessed using the asynchronous foreach statement:
-
+```
 var persons = context.Persons
     .Where(person => person.LastName == "LD")
     .AsAsyncEnumerable();
@@ -59,5 +59,5 @@ await foreach (var person in persons)
 {
     // use the person
 }
-
+```
 
